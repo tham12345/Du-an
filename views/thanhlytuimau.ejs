@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 	<title> Kho Lưu trữ máu</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="description" content="This is website management hospital">
+  	<meta name="author" content="Team real intership in VNPT-IT">
+
+  	<link rel="stylesheet" type="text/css" href="css/style_kholuutrumau.css">
+  	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+
+  	<script src="jquery.js"></script>
+  	<script src="kholuutrumau.js"></script>
+	  <script src="/socket.io/socket.io.js"></script>
+	  <!--button-->
+
+	  <link rel="icon" href="http://www.thuthuatweb.net/wp-content/themes/HostingSite/favicon.ico" type="image/x-ico"/>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	  <meta name="description" content="Animated Buttons with CSS3" />
+	  <meta name="keywords" content="css3, transitions, button, animation, hover, effect, icon, call-to-action, active" />
+
+	  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+	  <!--button-->
+
+<!--cố định  bảng-->
+	  <script   
+	  src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
+	   </script>
+	   <script>
+   
+	   function scrolify(tblAsJQueryObject, height){
+		   var oTbl = tblAsJQueryObject;
+   
+		   // for very large tables you can remove the four lines below
+		   // and wrap the table with <div> in the mark-up and assign
+		   // height and overflow property  
+		   var oTblDiv = $("<div/>");
+		   oTblDiv.css('height', height);
+		   oTblDiv.css('overflow','scroll');               
+		   oTbl.wrap(oTblDiv);
+   
+		   // save original width
+		   oTbl.attr("data-item-original-width", oTbl.width());
+		   oTbl.find('thead tr td').each(function(){
+			   $(this).attr("data-item-original-width",$(this).width());
+		   }); 
+		   oTbl.find('tbody tr:eq(0) td').each(function(){
+			   $(this).attr("data-item-original-width",$(this).width());
+		   });                 
+   
+   
+		   // clone the original table
+		   var newTbl = oTbl.clone();
+   
+		   // remove table header from original table
+		   oTbl.find('thead tr').remove();                 
+		   // remove table body from new table
+		   newTbl.find('tbody tr').remove();   
+   
+		   oTbl.parent().parent().prepend(newTbl);
+		   newTbl.wrap("<div/>");
+   
+		   // replace ORIGINAL COLUMN width                
+		   newTbl.width(newTbl.attr('data-item-original-width'));
+		   newTbl.find('thead tr td').each(function(){
+			   $(this).width($(this).attr("data-item-original-width"));
+		   });     
+		   oTbl.width(oTbl.attr('data-item-original-width'));      
+		   oTbl.find('tbody tr:eq(0) td').each(function(){
+			   $(this).width($(this).attr("data-item-original-width"));
+		   });                 
+	   }
+   
+	   $(document).ready(function(){
+		   scrolify($('#tblNeedsScrolling'), 120); // 160 is height
+	   });
+  
+	   </script>
+	   <!--cố định bản -->
+</head>
+<body>
+    <div class="wrap">
+    	<div id="banner">
+    		<div id = "logo">
+				<img src="./image/benhvien.png" alt="logo" height="100px" width="100px">
+				<img src="./image/bacsi2.png" alt="logo" height="100px" width="100px">
+    		</div>
+    		<div>
+     			<h4 id="title-banner"> KHO LƯU TRỮ MÁU</h4>
+     		</div>
+     		<div id = "trangchu">
+     			<button id="btnTrangchu"><img src="./image/home.png" alt="home" height="20px" width="20px"><br>Trang chủ
+     			</button> <br>
+				 <button id="btnThoat"><img src="./image/exit.png" alt="home" height="20px" width="20px"><br>Thoát</button><br>		 
+     		</div>
+		   </div>
+		   <div class="menu">
+				<div class="menuholder">
+						
+								<ul class="menu slide">
+						
+									<li><a href="https://www.script-tutorials.com/" class="red"><img style="width: 40px" height="30px" src="./image/7.png">Thêm</a> </li>
+						
+									<li><a href="https://www.script-tutorials.com/" class="orange"><img style="width: 40px" height="30px" src="./image/10.png"><br>Sửa</a>
+										
+									</li>
+						
+									<li><a href="https://www.script-tutorials.com/category/resources/" class="yellow"> <img style="width: 40px" height="30px" src="./image/1212.png"><br>Xóa</a>
+						
+										
+									</li>
+						
+									<li><a href="https://www.script-tutorials.com/category/resources/" class="green"><img style="width: 45px" height="30px" src="./image/4.png"><br>Bỏ qua</a></li>
+						
+									<li><a href="https://www.script-tutorials.com/about/" class="blue"><img style="width: 40px" height="30px" src="./image/6.png"> <br>In</a></li>
+						
+									<li><a href="https://www.script-tutorials.com/creating-css3-dropdown-menu-3/" class="violet"><img style="width: 40px" height="30px" src="./image/1.png">Danh sách</a></li>
+									<br><div class="timkiem">
+										<form id="demo-2">
+											<input type="search" placeholder="Tìm kiếm">
+										</form>
+										</div>
+								</ul>
+								
+								<div class="back"></div>
+						
+								<div class="shadow"></div>
+						
+							</div>
+						
+							<div style="clear:both"></div>
+						
+	</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+        function searchToggle(obj, evt){
+            var container = $(obj).closest('.search-wrapper');
+ 
+            if(!container.hasClass('active')){
+                  container.addClass('active');
+                  evt.preventDefault();
+            }
+            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                  container.removeClass('active');
+                  // clear input
+                  container.find('.search-input').val('');
+                  // clear and hide result container when we press close
+                  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+            }
+        }
+</script>
+    	<div class="content">
+			<div id="tren">
+    		<div id="form-kholuutrumau">
+				<div class="nhapthongtin">
+    			<table id="form-table">
+    				<form name="formnhapthongtin">
+							
+							<tr> <td style="width:126px;" align="right">Số tiếp nhận: </td> 
+								<td style="width:220px;"><input autofocus="autofocus" style ="height: 26px;"type="text" > </td>
+								 <td style="width:70px;" >Ngày : </td> 
+									<td style="width:160px; margin-right: 4px;" ><input type="date" > </td>
+									</tr>
+	</form>
+	</table>
+						</div >
+						
+						<div class="nhapthongtin2">
+							<table id="form-table2">
+								<form name="formnhapthongtin2">
+									
+    					<tr>
+    						<td style="width:150px;">Nhà cung cấp:</td>
+    						<td class="tt">
+    							<select>
+										<option >
+    								
+    								</option>
+    								<option >
+    									Bạch mai
+    								</option>
+    							</select>
+    						</td>
+    					</tr>    				
+    					<tr>
+    						<td>Dơn vị giao: </td>
+    						<td class="tt">
+    							<select>
+    								<option>
+    									
+    								</option>
+    								<option>
+    									B
+    								</option>
+    								<option>
+    									O
+    								</option>
+    								<option>
+    									AB
+    								</option>
+    							</select>
+    						</td>
+    					</tr> 
+                        <tr>
+                            <td>Đơn vị nhận: </td>
+                            <td>
+                                <select>
+                                    <option>Kho răng hàm mặt</option>
+                                </select>
+                            </td>
+						</tr> 
+						<tr>
+								<td>Người nhận: </td>
+								<td>
+									<select>
+										<option>System Administrator</option>
+									</select>
+								</td>
+							</tr> 
+
+					  						
+    					
+						
+						</form>
+						</table>
+					</div>
+		
+						</div>
+    					
+			<!--end nhap thong tin-->
+    		<div id="info">
+    			<table id="form-hienthi"  >
+    				<form name="formhienthithongtin">
+    					
+    					<tr>
+							<td style="width:200px;">Trạng thái:</td>
+    						<td >
+    							<select>
+										<option >
+    								Đã nhập kho
+    								</option>
+    								<option >
+    									Bạch mai
+    								</option>
+    							</select>
+							</td>   	
+							<td align="center" style=" margin-top: 10px; width:50px;">Nguồn máu:</td>
+    						<td style=" width:300px; padding-left: 8px;"  colspan="2" >
+    							<select style="width:200px;">
+										<option >
+											Viện phí
+    								</option>
+    								<option >
+    								
+    								</option>
+								</select>
+								<td style=""> </td>
+    						</td>   							
+    					</tr>
+    					<tr>
+								<td style="" >Ký hiệu mẫu hóa đơn: </td> 
+								<td style="width:160px;" colspan="4"  style=""><input  style="width: 365px; height: 70%;"  type="text" > </td>
+								<td></td>
+								<td></td>
+							
+								<td></td>
+								
+						</tr>
+						<tr>
+								<td style="width:126px;" >Số seri: </td> 
+								<td style="width:180px;"><input  style="width:180px; height: 70%; "type="text" > </td>
+								
+								<td style="width:180px;"><input style="width:180px; height: 70%; " type="text" > </td>
+								<td style="width:69px;" >Ngày : </td> 
+								<td style="width:160px; " ><input style=" height: 70%;"  type="date" > </td>
+
+						</tr>
+						<tr>
+								<td style=" margin-top:-10px;width:126px; padding-bottom: 50px;">Diễn giải: </td> 
+								<td  colspan="4" ><textarea cols="70" rows="5" ></textarea></td>
+								<td></td>
+								<td></td>
+							
+								<td></td>
+						</tr>
+
+    				</form>
+    			</table>
+			</div>
+			</div><br>
+			<!--end thong tin mau-->
+<div class="tuimau">
+<div class="table-tuimau">
+<table id="ban-tuimau" >
+
+	<form >
+
+		<tr>
+			<th><td>Mã túi máu:</td></th>
+			<td><input style=" height: 26px; width: 180px;" type="text" > </td>
+			<th><td>Loại sản phẩm:</td></th>
+			<td>
+					<select style=" height: 26px; width: 180px;" >
+							<option >
+						Đã nhập kho
+						</option>
+						<option >
+							Bạch mai
+						</option>
+					</select>
+			</td>
+		</tr>
+		
+		<tr> <th><td>Ngày lấy máu:</td></th>
+			<td><input style=" height: 26px; width: 180px;"  type="date" >  </td>
+			<th><td>Hạn sử dụng:</td></th>
+			<td><input style=" height: 26px; width: 180px;"  type="date" > </td></tr>
+		<tr>
+			<th><td>Đơn giá mua:</td></th>
+			<td><input style=" height: 26px; width: 180px;" type="text" ></td>
+			<th><td>Số lượng</td></th>
+			<td><input style=" height: 26px; width: 60px;" type="text" ></td>
+		</tr>
+		<tr>
+			<th><td>Đặt hàng:</td></th>
+			<td><input  style=" height: 26px; width: 180px;" type="text" ></td>
+			
+		
+		</tr>
+	</form>
+</table>
+</div>
+<!--end table-tuimau-->
+<div class="table-nhommau">
+	<table id="ban-nhommau">
+	<form>
+
+		<tr> <th><td>NHÓM AOB:</td></th>
+		<td colspan="3"> <select style="width: 175px; "  >
+				<option >
+			A
+			</option>
+			<option >
+			O
+			</option>
+		</select></td>
+		<td></td>
+		<td></td>
+		</tr>
+		
+		<tr> <th><td >NHÓM RhD:</td></th>
+			<td colspan="3"><select style="width: 175px;">
+					<option >
+				D+
+				</option>
+				<option >
+					Bạch mai
+				</option>
+			</select></td>
+			<td></td>
+			<td></td></tr>
+		<tr>
+				<th><td>Thành tiền VAT:</td></th>
+				<td><input  style="  height: 26px;"type="text" ></td>
+				<td style="width: 60px; "> <a  href="#" class="a-btn"><span class="a-btn-icon-right"><span ></span></span></a></td>
+				<td style="width: 60px;"><a  href="#" class="a-btn"><span  class="a-btn-icon-close"><span ></span></span></a></td>
+		</tr>
+</form>
+</table>
+	</div>
+	<!--end table-nhommau-->
+</div>
+<!---end túi máu -->
+
+<!-- bang thong tin-->
+			<div class="panel-body">
+				
+					<span>Thông tin máu</span>
+				<div class="form1">
+					<form class="bangthongtin" >
+				
+						
+						<table class="bangthong-tin" cellspacing="0" border="1 "  cellpadding="2" id="tblNeedsScrolling" >
+								<thead>
+						<tr style=" background:#2595DF;color:#ffffff; ">
+						
+						<th>Phát sinh chứng...</th>
+						<th>Mã túi máu</th>
+					<th>Hạn dùng</th>
+						<th>Ngày lấy máu</th>
+						<th>Nhóm ABO</th>
+						<th>Nhóm RhD</th>
+					<th>Số Lượng </th>
+						<th>Đơn giá mua</th>
+						<th>TỶ lệ VAT</th>
+						<th>Gía trị VAT</th>
+					<th>Đơn giá vốn </th>
+						<th>Thành tiền sau VAT</th>
+			
+						</tr >
+					</thead>
+						<tbody>
+						<tr style=" background:#f7fcfc;">
+						<td> ghvhf</td>
+						<td> fs</td>
+						<td>fgfg</td>
+						<td>gfgfgf</td>
+						<td> ghvhf</td>
+						<td> fs</td>
+						<td>fgfg</td>
+						<td>gfgfgf</td>
+						<td> ghvhf</td>
+						<td> fs</td>
+						<td>fgfg</td>
+						<td>gfgfgf</td>
+						
+					
+						</tr>
+						</tr >
+						
+						<tr >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr  style=" background:#f7fcfc;">
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr  style=" background:#f7fcfc;">
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr style=" background:#f7fcfc;" >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						<tr style=" background:#f7fcfc;">
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						</tr>
+						
+						</tr >
+						
+						<tr >
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						</tr>
+						</tr >
+						
+						<tr style=" background:#f7fcfc;">
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+						</tr >
+						
+						<tr>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+								<td> ghvhf</td>
+								<td> fs</td>
+								<td>fgfg</td>
+								<td>gfgfgf</td>
+						
+						</tr>
+					</tbody>
+					
+									</table>
+							
+				
+					</form>
+					</div>
+				</div>
+
+
+      	</div>
+	</div><br>
+
+	
+
+
+    <div class="footer">
+    	
+      	<span id="footer1">	<marquee>Tư vấn hệ thống - Liên hệ: 070xxxxx - Website công ty: vnptit.vn</marquee></span>
+     
+      		<span>Copyright &copy; 2019 by VNPT</span>
+      	</div>
+    
+</body>
+</html>

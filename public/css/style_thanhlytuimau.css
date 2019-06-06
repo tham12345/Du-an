@@ -1,0 +1,448 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+
+    background: #97d9e1;
+    }
+.wrap{
+    width: 100%;
+    height: 735px;
+    border: 1px solid #d1d1d1;
+    margin: auto;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;}
+
+#banner{
+    width: 100%;
+    height: 30px;  
+    margin-bottom: 0px;
+    background-image: url("/image/banner.jpg");
+}
+#logo{
+    width: 12,5%;
+    height: 80%;
+    float: left;}
+
+#title-banner{
+    width: 77.5%;
+    height: 70%;
+    text-align: center;
+    line-height: 100px;
+    font-weight: Arial;
+    font-size: 40px;
+    color: #fff;
+    float: left;
+    background-image:  linear-gradient(to right, #ce75cf, #00dbde);
+    margin: 0;
+    margin-left: 2px;
+    text-shadow: 0px 0px 0px #b2a98f,
+                 0px 4px 2px rgba(0,0,0,0.15),
+                 0px 7px 0px rgba(0,0,0,0.1),
+                 0px 10px 9px rgba(0,0,0,0.1);}
+/*khu vuc nut  thoát và trang chủ*/
+#trangchu{
+    width: 10%;
+    height: 100px;
+    float: right;
+    line-height: 5px;}
+/***/
+#btnTrangchu{
+    display: block;
+    text-align: center;
+    height: 45%;
+    padding:1% ;
+    margin: 1px 12px;
+    width: 125px;
+    line-height: 13px;
+    font-weight: bold;
+    color:  #fffff;
+    background-color:  #97d9e1;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+    -moz-box-shadow:0px 0px 6px rgba(0, 0, 0, 10);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);}
+
+#btnThoat{
+    display: block;
+    text-align: center;
+    height: 45%;
+    padding-top:1%;
+
+padding-right:1%;
+padding-bottom:1%;
+padding-left: 1%;
+    margin: 1px 12px;
+    width: 125px;
+    line-height: 13px;
+    font-weight: bold;
+    color:  #fffff;
+    background-color:  #97d9e1;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+    -moz-box-shadow:0px 0px 6px rgba(0, 0, 0, 10);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+}
+/*phan than html*/
+.content{
+    width: 100%px;
+    height: 580px;}
+/*form so tiep nhận & nha cung cap*/
+#form-kholuutrumau{
+    width: 37%;
+    height: 230px;
+    float: left;}
+    /*bang so tiep nhan*/
+#form-table{
+    width: 100%;
+    height: 50px;}
+
+    .nhapthongtin {
+      width: 700px;}
+   
+#form-table td{
+    height: 30px;
+    text-align: left ;
+}
+    #form-table input[type=text]{
+    width: 190px;
+}/**/
+ /*nha cung cap*/
+#form-table2{
+    width: 85%;
+    height: 100px;}
+#form-table2 td{
+    height: 40px;
+    text-align: left;
+   }
+   .nhapthongtin2{ 
+    height: 230px;
+} /**/
+select {
+    font-size: 16px;
+    height: 29px;
+    padding-right: 10px; /* If you add too much padding here, the options won't show in IE */
+    width:90%; }
+    /* khu vuc bang trang thai*/
+#info{
+    width: 50%;
+    height: 235px;
+    float: right;
+    display: inline;}
+/*ban trang tai*/
+#form-hienthi{
+    width: 90%;
+    height:  250px;}
+/*2 ban duoi*/
+.tuimau{
+margin-top: 220px;
+    height: 170px;
+}
+/*bản ben trai*/
+.table-tuimau{
+float: left;
+
+}
+#ban-tuimau td{
+    height: 40px;
+  width: 125px;
+ 
+}
+/*bản ben phai*/
+.table-nhommau{
+float: left;}
+#ban-nhommau td{
+   height: 40px;
+ }
+/*icon tai xuong và close*/
+.a-btn{
+    background:-webkit-linear-gradient(top, #a9db80 0%, #96c56f 100%);
+width: 40px;
+ height:40px;
+    position:relative;
+  margin-left: 10px;
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    float:left;
+    overflow:hidden;}
+.a-btn:hover{
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);}
+
+/*icon tai xuong*/
+.a-btn:hover .a-btn-icon-right span{
+  opacity:1;}
+  
+.a-btn:active{
+    position:relative;
+    top:1px;
+    background:#80ab5d;
+    -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    border-color:#a9db80;}
+.a-btn:active .a-btn-icon-right span{
+    -webkit-transform:scale(1.4);
+    -moz-transform:scale(1.4);
+    -ms-transform:scale(1.4);
+    -o-transform:scale(1.4);
+    transform:scale(1.4);}
+    .a-btn-icon-right span{
+        width: 37px;
+        height: 37px;
+        opacity: 0.7;
+        border-radius: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0px 0px -20px;
+        border: 1px solid rgba(0,0,0,0.5);
+        background: #4e5c50 url(/image/arrow_down.png) no-repeat center center;
+        box-shadow:
+            0px 1px 1px rgba(255,255,255,0.3) inset,
+            0px 1px 2px rgba(255,255,255,0.5);
+        transition: all 0.3s ease-in-out;
+    }
+    .a-btn:hover .a-btn-icon-right span{
+        opacity: 1;
+    }
+    .a-btn:active .a-btn-icon-right span{
+        transform: scale(1.4);
+    }
+/*end icon tai xuong*/
+    /*icon close*/
+.a-btn:active .a-btn-icon-close span{
+    -webkit-transform:scale(1.4);
+    -moz-transform:scale(1.4);
+    -ms-transform:scale(1.4);
+    -o-transform:scale(1.4);
+    transform:scale(1.4)}
+.a-btn-icon-close span{
+width: 37px;
+    height: 37px;
+    opacity: 0.7;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -20px 0px 0px -20px;
+    border: 1px solid rgba(0,0,0,0.5);
+    background: #4c6850 url(/image/1111111.png)  no-repeat center center;
+    box-shadow:
+        0px 1px 1px rgba(255,255,255,0.3) inset,
+        0px 1px 2px rgba(255,255,255,0.5);
+    transition: all 0.3s ease-in-out;
+}
+.a-btn:hover .a-btn-icon-close span{
+    opacity: 1;}
+    .a-btn:active .a-btn-icon-close span{
+        transform: scale(1.4);}
+
+/*menu lon chua them sua xoa và tiem kiem*/
+.menu{
+position:relative;  
+    width:70%;
+    height:70px;
+    margin:70px 0px 0px 207px;
+padding: 0px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+/*tim kiem*/
+.timkiem{
+float: left;
+}
+.timkiem input {
+    outline: none;
+    margin:-14px 20px 0px 0px ;
+}
+.timkiem input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+.timkiem input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none; 
+}
+.timkiem input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 500px;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.timkiem input[type=search]:focus {
+    width: 530px;
+    background-color: #fff;
+    border-color: #66CC75;
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+.timkiem input:-moz-placeholder {
+    color: #999;
+}
+.timkiem input::-webkit-input-placeholder {
+    color: #999;
+}
+/*end tim kiem*/
+/*me nu them sua xoa*/
+.menuholder {  
+      overflow:hidden;  
+    }   
+    ul.menu { 
+        display:block;    
+        list-style:none;   
+        margin:0px;      
+        padding:0px;    
+        width:100%;   
+    }   
+    ul.menu li {    
+        float:left;  
+        margin:0 5px 0 0; 
+    }  
+    ul.menu li > a {
+        width:70px;
+         height:60px;
+        -moz-border-radius:0 0 10px 10px;  
+        -moz-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.9); 
+        -moz-transition:all 0.2s ease-in-out;  
+        -o-border-radius:0 0 10px 10px;   
+        -o-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.9); 
+        -o-transition:all 0.2s ease-in-out; 
+        -webkit-border-bottom-left-radius:10px;  
+        -webkit-border-bottom-right-radius:10px;   
+        -webkit-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);
+        -webkit-transition:all 0.2s ease-in-out;  
+        border-radius:0 0 10px 10px;  
+        box-shadow:2px 2px 4px rgba(0, 0, 0, 0.9); 
+        color:#eee; 
+        display:block; 
+        padding:0 10px; 
+        text-decoration:none;
+        transition:all 0.2s ease-in-out;  
+    }   
+    ul.menu li a.red { 
+      background:#60C50D; }  
+    ul.menu li a.orange {
+        background:#9966FF;}
+    ul.menu li a.yellow {
+        background:#F8B2A6;}
+    ul.menu li a.green {
+      background:#96A2F6;}
+    ul.menu li a.blue {
+      background:#698AF7;}
+    ul.menu li a.violet {
+    background:#B9B9BA; }
+
+    .menu li div.subs {
+        left:0;
+        overflow:hidden;
+        position:absolute; 
+        top:35px;
+        width:0;  }
+    
+    .menu li div.subs dl {
+        -moz-transition-duration:.2s;
+        -o-transition-duration:.2s;
+        -webkit-transition-duration:.2s;
+        float:left;
+        margin:0 130px 0 0;
+        overflow:hidden;
+        padding:40px 0 5% 2%;
+        width:0; }
+    
+    .menu dt {
+        color:#fc0;
+        font-family:arial, sans-serif;
+        font-size:12px;
+        font-weight:700;
+        height:20px;
+        line-height:20px;
+        margin:0;
+        padding:0 0 0 10px;
+        white-space:nowrap;}
+    
+    .menu dd {
+        margin:0;
+        padding:0;
+        text-align:left;}
+    
+    .menu dd a {
+        background:transparent;
+        color:#fff;
+        font-size:12px;
+        height:20px;
+        line-height:20px;
+        padding:0 0 0 10px;
+        text-align:left;
+        white-space:nowrap; 
+        width:80px; }
+    
+    .menu dd a:hover {
+        color:#fc0; }
+    
+    .menu li:hover div.subs dl {
+     -moz-transition-delay:0.2s;
+        -o-transition-delay:0.2s;
+        -webkit-transition-delay:0.2s;
+        margin-right:2%;
+        width:21%;}
+    
+    ul.menu li:hover > a,ul.menu li > a:hover {
+     background:#aaa;
+     color:#fff;
+     padding:10px 10px 0; }
+    
+    ul.menu li a.red:hover,ul.menu li:hover a.red {
+        background:#7AEE1B;}
+    
+    ul.menu li a.orange:hover,ul.menu li:hover a.orange {
+      background:#0099FF;    }
+    
+    ul.menu li a.yellow:hover,ul.menu li:hover a.yellow {
+    background:#F2D5D0;  }
+    
+    ul.menu li a.green:hover,ul.menu li:hover a.green {
+    background:#A7B1F7;}
+    
+    ul.menu li a.blue:hover,ul.menu li:hover a.blue {
+     background:#8D99F7; }
+    
+    ul.menu li a.violet:hover,ul.menu li:hover a.violet {
+    background:#EDEDEE;}
+
+    .menu li:hover div.subs,.menu li a:hover div.subs {
+        width:100%; }
+   /*end menu*//*end menu lon*/
+/*bản hien thi cuoi*/
+    .panel-body{
+width: 99%; } 
+.bangthong-tin{
+margin-left: 10px;
+width: 99%;
+border:  1px solid #66CC75;
+text-align: center;
+}
+/**/
+.footer {
+    width: 100%;
+    height: 30px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+#footer1{
+    color: brown;}
